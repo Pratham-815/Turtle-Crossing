@@ -9,8 +9,10 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 
+player = Player()
+
 screen.listen()
-screen.onkey(fun=Player.go_up, key="Up")
+screen.onkey(fun=player.go_up, key="Up")
 
 
 game_is_on = True
