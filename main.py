@@ -16,6 +16,8 @@ screen.onkey(fun=player.go_up, key="Up")
 
 car_manager = CarManager()
 
+Scoreboard = Scoreboard()
+
 game_is_on = True
 
 while game_is_on:
