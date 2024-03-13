@@ -14,12 +14,19 @@ player = Player()
 screen.listen()
 screen.onkey(fun=player.go_up, key="Up")
 
-can_manager = CarManager()
+car_manager = CarManager()
 
 game_is_on = True
+
 while game_is_on:
+    
     time.sleep(0.1)
     screen.update()
 
-    can_manager.create_car()
-    can_manager.move_cars()
+    car_manager.create_car()
+    car_manager.move_cars()
+
+    # Detect collision with car
+    for car in car_manager.all_cars:
+        if car.distance(player) < 25:
+            game_is_on = False
