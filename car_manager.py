@@ -32,4 +32,4 @@ class CarManager(Turtle):
 
 
     def level_up(self):
-        self.speed += MOVE_INCREMENT
+        self.speed += MOVE_INCREMENT/2
